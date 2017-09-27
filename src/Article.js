@@ -4,7 +4,7 @@ export default class Article extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isOpen:true
+            isOpen:false
         }
     }
 
