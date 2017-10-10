@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import Comment from './Comment'
 
 class CommentList extends Component {
+    //задаем дефолтные пропсы, используются, если в них из родителя ничего не приходит
+    static defaultProps ={
+        comments:[]
+    }
+
     state = {
         isOpen: false
     }
