@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import CommentList from './CommentList'
 
 export default class Article extends Component {
@@ -6,7 +7,7 @@ export default class Article extends Component {
         super(props)
 
         this.state = {
-            isOpen: false
+            isOpen: true
         }
     }
 
