@@ -11,7 +11,7 @@ import Article from './Article'
             <Article
                 article={article}
                 isOpen = {article.id === this.state.openArticleId}
-                toggleOpen = {this.toggleOpenArticle(article.id)}
+                toggleOpen = {this.toggleAccordionOpenArticle(article.id)}
             />
         </li>)
 
@@ -21,7 +21,7 @@ import Article from './Article'
             </ul>
         )
     }
-    toggleOpenArticle=(openArticleId) => ev => {
+     toggleAccordionOpenArticle=(openArticleId) => ev => {
         this.setState({
             openArticleId
         })
@@ -29,3 +29,4 @@ import Article from './Article'
 }
 
 export default ArticleList;
+//toggleAccordionOpenArticle
