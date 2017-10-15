@@ -7,3 +7,4 @@ export default (OriginalComponent) => class WrappedComponent extends Component {
     }
 
 }
+//делаем что-то в декораторе
