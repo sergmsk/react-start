@@ -5,7 +5,10 @@ export default (OriginalComponent) => class WrappedComponent extends Component {
         openArticleId: null
     }
     render() {
-        return <OriginalComponent {...this.props} {...this.state} />
+        return <OriginalComponent
+            {...this.props}
+            {...this.state}
+        />
     }
     toggleAccordionOpenArticle=(openArticleId) => ev => {
         if(openArticleId==this.state.openArticleId) openArticleId = null;
