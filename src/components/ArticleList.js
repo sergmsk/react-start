@@ -1,11 +1,12 @@
 import React , {Component} from 'react'
 import Article from './Article'
+import toggleAccordionOpenArticle from '../decorators/toggleAccordionOpenArticle'
 
  class ArticleList extends Component  {
 
-    state = {
-        openArticleId: null
-    }
+     state = {
+         openArticleId: null
+     }
     render() {
         const articleElements = this.props.articles.map(article => <li key={article.id}>
             <Article
@@ -22,11 +23,12 @@ import Article from './Article'
         )
     }
      toggleAccordionOpenArticle=(openArticleId) => ev => {
+        if(openArticleId==this.state.openArticleId) openArticleId = null;
         this.setState({
             openArticleId
         })
     }
 }
 
-export default ArticleList;
+export default toggleAccordionOpenArticle(ArticleList);
 //toggleAccordionOpenArticle
